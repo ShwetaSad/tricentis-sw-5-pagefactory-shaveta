@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="testsuite" verbose="1" >
+    <groups>
+        <run>
+            <include name="Regression"></include>
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+        <listener class-name="com.tricentis.demowebshop.customerlisteners.CustomerListeners"></listener>
+    </listeners>
+    <test name="Regression Test"   >
+        <classes>
+            <class name="com.tricentis.demowebshop.testsuite.LoginPageTest"></class>
+            <class name="com.tricentis.demowebshop.testsuite.RegisterPageTest"></class>
+            <class name="com.tricentis.demowebshop.testsuite.ComputerPageTest"></class>
+        </classes>
+    </test>
+</suite>
